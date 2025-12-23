@@ -49,65 +49,22 @@ const ReservationForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Simulate loading state
-    const submitBtn = e.currentTarget.querySelector('button[type="submit"]');
-    if (submitBtn) {
-      submitBtn.innerHTML = 'Envoi en cours...';
-      (submitBtn as HTMLButtonElement).disabled = true;
-    }
-
     // Gather form data
     const form = e.target as HTMLFormElement;
     const formData = {
       name: (form.elements.namedItem('name') as HTMLInputElement).value,
       email: (form.elements.namedItem('email') as HTMLInputElement).value,
       phone: (form.elements.namedItem('phone') as HTMLInputElement).value,
+      room: selectedRoom,
       arrival: (form.elements.namedItem('arrival') as HTMLInputElement).value,
       departure: (form.elements.namedItem('departure') as HTMLInputElement).value,
       message: (form.elements.namedItem('message') as HTMLTextAreaElement).value || 'Aucun message',
     };
 
-    const room = rooms.find(r => r.slug === selectedRoom);
+    await sendEmail(formData);
 
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData, // Spread existing form data
-          room: room ? room.title : 'Non spécifié',
-          dates: `Du ${formData.arrival} au ${formData.departure}`
-        }),
-      });
-
-      if (response.ok) {
-        setSubmitted(true);
-        // Reset form after delay
-        setTimeout(() => {
-          setSubmitted(false);
-          form.reset();
-          if (submitBtn) {
-            submitBtn.innerHTML = 'Envoyer la demande';
-            (submitBtn as HTMLButtonElement).disabled = false;
-          }
-        }, 5000);
-      } else {
-        alert("Une erreur est survenue lors de l'envoi. Veuillez réessayer.");
-        if (submitBtn) {
-          submitBtn.innerHTML = 'Envoyer la demande';
-          (submitBtn as HTMLButtonElement).disabled = false;
-        }
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert("Erreur de connexion au serveur.");
-      if (submitBtn) {
-        submitBtn.innerHTML = 'Envoyer la demande';
-        (submitBtn as HTMLButtonElement).disabled = false;
-      }
-    }
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 5000);
   };
 
   return (
@@ -133,12 +90,12 @@ const ReservationForm: React.FC = () => {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="reveal-item animation-delay-300 grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <FormInput label="Nom complet" id="name" name="name" placeholder="Votre nom" required />
-                  <FormInput label="Email" id="email" name="email" type="email" placeholder="votre@email.com" required />
+                  <FormInput label="Nom complet" id="name" placeholder="Votre nom" required />
+                  <FormInput label="Email" id="email" type="email" placeholder="votre@email.com" required />
                 </div>
 
                 <div className="reveal-item animation-delay-400 grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <FormInput label="Téléphone" id="phone" name="phone" type="tel" placeholder="+225 ..." required />
+                  <FormInput label="Téléphone" id="phone" type="tel" placeholder="+225 ..." required />
                   <div className="space-y-2">
                     <label className="text-xs font-semibold text-stone-500 uppercase tracking-wider pl-1">Type de chambre</label>
                     <select
@@ -154,13 +111,13 @@ const ReservationForm: React.FC = () => {
                 </div>
 
                 <div className="reveal-item animation-delay-500 grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <FormInput label="Arrivée" id="arrival" name="arrival" type="date" required />
-                  <FormInput label="Départ" id="departure" name="departure" type="date" required />
+                  <FormInput label="Arrivée" id="arrival" type="date" required />
+                  <FormInput label="Départ" id="departure" type="date" required />
                 </div>
 
                 <div className="reveal-item animation-delay-600 space-y-2">
-                  <label htmlFor="message" className="text-xs font-semibold text-stone-500 uppercase tracking-wider pl-1">Message</label>
-                  <textarea id="message" name="message" rows={4} className="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 outline-none transition-all text-base bg-stone-50/50 hover:bg-white placeholder:text-stone-300" placeholder="Demande spéciale..."></textarea>
+                  <label className="text-xs font-semibold text-stone-500 uppercase tracking-wider pl-1">Message</label>
+                  <textarea rows={4} className="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 outline-none transition-all text-base bg-stone-50/50 hover:bg-white placeholder:text-stone-300" placeholder="Demande spéciale..."></textarea>
                 </div>
 
                 <button type="submit" className="reveal-item animation-delay-700 group w-full py-4 bg-emerald-800 hover:bg-emerald-900 text-white font-medium rounded-xl shadow-lg shadow-emerald-900/20 transition-all flex items-center justify-center gap-2 transform active:scale-95">

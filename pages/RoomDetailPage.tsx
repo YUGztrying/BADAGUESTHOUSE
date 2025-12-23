@@ -53,9 +53,9 @@ const RoomDetailPage: React.FC = () => {
 
         <Reveal className="absolute bottom-0 left-0 w-full p-6 md:p-12 max-w-7xl mx-auto">
           <div className="reveal-item">
-            <Link to="/rooms" className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors backdrop-blur-md bg-white/10 px-6 py-2.5 rounded-full border border-white/20 text-sm group">
+            <Link to="/" className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors backdrop-blur-md bg-white/10 px-6 py-2.5 rounded-full border border-white/20 text-sm group">
               <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-              Retour
+              Retour à l'accueil
             </Link>
           </div>
           <div className="reveal-item animation-delay-200 space-y-4 mb-8">
@@ -82,7 +82,7 @@ const RoomDetailPage: React.FC = () => {
           <div className="lg:col-span-2 space-y-12">
             {/* Photo Gallery - Moved to Top */}
             {room.gallery.length > 1 && (
-              <Reveal className="space-y-8 mb-12 mt-20">
+              <Reveal className="space-y-8 mb-12 bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-stone-100">
                 <div className="reveal-item">
                   <h3 className="text-3xl font-serif text-stone-900 mb-2">Galerie de la chambre</h3>
                   <p className="text-stone-400 text-sm font-medium uppercase tracking-widest">Aperçus détaillés de votre espace</p>
