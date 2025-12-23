@@ -1,0 +1,336 @@
+
+import { Room } from '../types';
+
+export const rooms: Room[] = [
+  {
+    id: 'balmer',
+    slug: 'balmer',
+    title: 'Chambre Balmer',
+    subtitle: 'Lumière et sérénité',
+    price: 50000,
+    size: '25 m²',
+    capacity: '2 Personnes',
+    image: '/assets/balmer/balmer-1.png',
+    gallery: [
+      '/assets/balmer/balmer-1.png',
+      '/assets/balmer/balmer-2.jpg',
+      '/assets/balmer/balmer-3.png'
+    ],
+    description: "Baignée de lumière naturelle, la Chambre Balmer offre un refuge apaisant avec ses tons clairs et ses matériaux nobles. Idéale pour un séjour d'affaires ou une escapade en couple, elle dispose d'un espace de travail ergonomique et d'une salle de bain moderne avec douche à l'italienne. La décoration minimaliste met en valeur l'artisanat local avec subtilité.",
+    amenities: [
+      'Lit king-size',
+      'Climatisation',
+      'Télévision à écran plat',
+      'Wi-Fi',
+      'Douche à l’italienne',
+      'Plateau café / thé',
+      'Rangements',
+      'Balcon',
+      'Terrasse'
+    ],
+    features: [
+      { icon: 'Waves', label: 'Vue Jardin' },
+      { icon: 'Monitor', label: 'Espace Bureau' }
+    ],
+    details: {
+      installations: [
+        'Parking intérieur',
+        'Sécurité 24h/24',
+        'Vue sur la piscine'
+      ],
+      options: [
+        'Petit-déjeuner',
+        'Location de véhicule',
+        'Location d’espace'
+      ],
+      important: [
+        'Arrivée : 14h',
+        'Départ : 11h',
+        'Chambres non-fumeur',
+        'Animaux non autorisés',
+        'Horaires de la piscine : 08h00 – 20h00 (réservée aux clients)',
+        'Accès à la plage : env. 10 min à pied ou 3 min en voiture',
+        'Aéroport le plus proche : env. 10 min en voiture'
+      ]
+    }
+  },
+  {
+    id: 'mangrove',
+    slug: 'mangrove',
+    title: 'Chambre Mangrove',
+    subtitle: 'Évasion Tropicale',
+    price: 50000,
+    size: '28 m²',
+    capacity: '2 Personnes',
+    image: '/assets/mangrove/mangrove-1.png',
+    gallery: [
+      '/assets/mangrove/mangrove-1.png',
+      '/assets/mangrove/mangrove-2.png',
+      '/assets/mangrove/mangrove-3.jpg',
+      '/assets/mangrove/mangrove-4.png'
+    ],
+    description: "Inspirée par la végétation luxuriante de San Pedro, la Chambre Mangrove s'ouvre sur une vue imprenable du jardin tropical. Les teintes vertes et boisées créent une atmosphère de sérénité absolue. Profitez d'un confort supérieur avec une literie King Size et un coin lecture cosy pour vos moments de détente après une journée à la plage.",
+    amenities: [
+      'Lit king-size',
+      'Climatisation',
+      'Télévision à écran plat',
+      'Wi-Fi',
+      'Douche à l’italienne',
+      'Plateau café / thé',
+      'Rangements',
+      'Balcon',
+      'Terrasse'
+    ],
+    features: [
+      { icon: 'Trees', label: 'Côté Jardin' },
+      { icon: 'Wind', label: 'Calme Absolu' }
+    ],
+    details: {
+      installations: [
+        'Parking intérieur',
+        'Sécurité 24h/24',
+        'Vue sur la piscine'
+      ],
+      options: [
+        'Petit-déjeuner',
+        'Location de véhicule',
+        'Location d’espace pour événements'
+      ],
+      important: [
+        'Arrivée (check-in) : 14h',
+        'Départ (check-out) : 11h',
+        'Chambres non-fumeurs',
+        'Animaux non autorisés',
+        'Horaires de la piscine : 08h00 – 20h00 (réservée aux clients)',
+        'Accès à la plage : environ 10 min à pied ou 3 min en voiture',
+        'Aéroport le plus proche : environ 10 min en voiture'
+      ]
+    }
+  },
+  {
+    id: 'kroumen',
+    slug: 'kroumen',
+    title: 'Chambre Kroumen',
+    subtitle: 'Héritage Culturel',
+    price: 60000,
+    size: '25 m²',
+    capacity: '2 Personnes',
+    image: '/assets/kroumen/kroumen-1.png',
+    gallery: [
+      '/assets/kroumen/kroumen-1.png',
+      '/assets/kroumen/kroumen-1.png',
+      '/assets/kroumen/kroumen-2.png',
+      '/assets/kroumen/kroumen-3.png'
+    ],
+    description: "Hommage à la culture locale, la Chambre Kroumen se distingue par sa décoration authentique intégrant des motifs traditionnels et des bois précieux. Chaleureuse et accueillante, elle offre tout le confort moderne tout en vous plongeant dans l'âme de la région. Un choix parfait pour les voyageurs en quête d'authenticité.",
+    amenities: [
+      'Lit king-size',
+      'Climatisation',
+      'Télévision à écran plat',
+      'Wi-Fi',
+      'Douche à l’italienne',
+      'Plateau café / thé',
+      'Espace de rangement / placard',
+      'Balcon',
+      'Terrasse'
+    ],
+    features: [
+      { icon: 'Shield', label: 'Authentique' },
+      { icon: 'Sun', label: 'Lumineuse' }
+    ],
+    details: {
+      installations: [
+        'Parking intérieur',
+        'Sécurité 24h/24 et 7j/7',
+        'Vue sur la piscine'
+      ],
+      options: [
+        'Petit-déjeuner',
+        'Location de véhicule',
+        'Location d’espace pour événements'
+      ],
+      important: [
+        'Check-in : 14h',
+        'Check-out : 11h',
+        'Chambres non-fumeurs',
+        'Animaux non autorisés',
+        'Horaires de la piscine : 08h00 – 20h00 (réservée aux clients)',
+        'Accès à la plage : environ 10 minutes à pied ou 3 minutes en voiture',
+        'Aéroport le plus proche : environ 10 minutes en voiture'
+      ]
+    }
+  },
+  {
+    id: 'ebene',
+    slug: 'ebene',
+    title: 'Chambre Ébène',
+    subtitle: 'Élégance Intemporelle',
+    price: 50000,
+    size: '30 m²',
+    capacity: '2 Personnes',
+    image: '/assets/ebene/ebene-4.png',
+    gallery: [
+      '/assets/ebene/ebene-4.png',
+      '/assets/ebene/ebene-1.png',
+      '/assets/ebene/ebene-2.png',
+      '/assets/ebene/ebene-3.png'
+    ],
+    description: "L'élégance à l'état pur. La Chambre Ébène joue sur les contrastes with un mobilier en bois sombre et des textiles clairs de haute qualité. Plus spacieuse, elle offre une ambiance feutrée et sophistiquée, idéale pour se ressourcer. La salle de bain spacieuse est équipée de produits d'accueil premium.",
+    amenities: [
+      'Lit KING SIZE',
+      'Climatisation',
+      'Télévision écran plat',
+      'Wi-Fi',
+      'Douche à l’italienne',
+      'Plateau café/thé',
+      'Rangements',
+      'Balcon',
+      'Terrasse'
+    ],
+    features: [
+      { icon: 'Crown', label: 'Prestige' },
+      { icon: 'Maximize', label: 'Plus spacieuse' }
+    ],
+    details: {
+      installations: [
+        'Parking intérieur',
+        'Sécurité 24 h/24',
+        'Vue sur la piscine'
+      ],
+      options: [
+        'Petit-déjeuner',
+        'Location de véhicule',
+        'Location d’espace'
+      ],
+      important: [
+        'Arrivée : 14 h',
+        'Départ : 11 h',
+        'Chambres non-fumeur',
+        'Animaux non autorisés',
+        'Horaires de la piscine : 08 h00 – 20 h00 (réservée à la clientèle)',
+        'Accès à la plage : environ 10 min à pied ou 3 min en voiture',
+        'Aéroport le plus proche : environ 10 min en voiture'
+      ]
+    }
+  },
+  {
+    id: 'suite',
+    slug: 'suite',
+    title: 'Suite Junior',
+    subtitle: 'Le Luxe d\'Espace',
+    price: 70000,
+    size: '45 m²',
+    capacity: '2-3 Personnes',
+    image: '/assets/suite/suite-1.png',
+    gallery: [
+      '/assets/suite/suite-1.png',
+      '/assets/suite/suite-2.jpg',
+      '/assets/suite/suite-3.png',
+      '/assets/suite/suite-4.jpg',
+      '/assets/suite/suite-5.png'
+    ],
+    description: "Cette suite offre tout le confort et l’équipement des chambres doubles, avec en plus un espace salon et une cuisine américaine, ce qui la rend adaptée à un séjour autonome et plus confortable.",
+    amenities: [
+      'Lit KING SIZE',
+      'Climatisation',
+      'Télévision à écran plat',
+      'Wi-Fi',
+      'Douche à l’italienne',
+      'Plateau café/thé',
+      'Rangements',
+      'Balcon',
+      'Sièges de balcon',
+      'Petit salon',
+      'Petite cuisine',
+      'Réfrigérateur'
+    ],
+    features: [
+      { icon: 'Layout', label: 'Salon Séparé' },
+      { icon: 'ShoppingBag', label: 'Cuisine équipée' }
+    ],
+    details: {
+      installations: [
+        'Parking intérieur',
+        'Sécurité 24 h/24',
+        'Vue sur la piscine'
+      ],
+      options: [
+        'Petit-déjeuner',
+        'Location de véhicule',
+        'Location d’espace'
+      ],
+      important: [
+        'Arrivée : 14 h',
+        'Départ : 11 h',
+        'Chambres non-fumeur',
+        'Animaux non autorisés',
+        'Horaires de la piscine : 08 h00 – 20 h00 (réservée à la clientèle)',
+        'Accès à la plage : environ 10 min à pied ou 3 min en voiture',
+        'Aéroport le plus proche : environ 10 min en voiture'
+      ]
+    }
+  },
+  {
+    id: 'bungalow',
+    slug: 'bungalow',
+    title: 'Bungalow Privatif',
+    subtitle: 'Sanctuaire d\'Exclusivité',
+    price: 120000,
+    size: '60 m²',
+    capacity: '2-4 Personnes',
+    image: '/assets/bungalow/bungalow-1.jpg',
+    gallery: [
+      '/assets/bungalow/bungalow-1.jpg',
+      '/assets/bungalow/bungalow-2.png',
+      '/assets/bungalow/bungalow-3.png',
+      '/assets/bungalow/bungalow-4.png',
+      '/assets/bungalow/bungalow-5.png',
+      '/assets/bungalow/bungalow-6.jpg',
+      '/assets/bungalow/bungalow-7.jpg',
+      '/assets/bungalow/bungalow-8.jpg'
+    ],
+    description: "Le bungalow privatif est pensé comme une petite maison indépendante au sein de la guesthouse, idéale pour des séjours en famille ou entre amis avec plus d’intimité et d’espace.",
+    amenities: [
+      'Lit KING SIZE',
+      'Deux canapés-lits',
+      'Télévision à écran plat',
+      'Wi-Fi',
+      'Climatisation',
+      'Douche à l’italienne',
+      'Rangements',
+      'Armoire ou penderie',
+      'Plateau café/thé',
+      'Cuisine équipée',
+      'Électroménager',
+      'Balcon/Terrasse',
+      'Mobilier extérieur',
+      'Coin repas',
+      'Petit jardin'
+    ],
+    features: [
+      { icon: 'Home', label: 'Indépendant' },
+      { icon: 'Trees', label: 'Jardin Privatif' }
+    ],
+    details: {
+      installations: [
+        'Parking intérieur',
+        'Sécurité 24 h/24',
+        'Vue sur la piscine'
+      ],
+      options: [
+        'Petit-déjeuner',
+        'Location de véhicule',
+        'Location d’espace'
+      ],
+      important: [
+        'Arrivée : 14 h',
+        'Départ : 11 h',
+        'Non-fumeur',
+        'Animaux non autorisés',
+        'Horaires de la piscine : 08 h00 – 20 h00 (réservée à la clientèle)',
+        'Accès à la plage : environ 10 min à pied ou 3 min en voiture',
+        'Aéroport le plus proche : environ 10 min en voiture'
+      ]
+    }
+  }
+];
