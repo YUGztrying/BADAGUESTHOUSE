@@ -10,10 +10,11 @@ export const rooms: Room[] = [
     price: 50000,
     size: '25 m²',
     capacity: '2 Personnes',
-    image: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/07ded898-aa0d-4eca-8708-2142bb7f6177_1600w.png',
+    image: '/assets/balmer/balmer-card-main.png',
     gallery: [
-      'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/07ded898-aa0d-4eca-8708-2142bb7f6177_1600w.png',
-      'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0a7c6f1f-3b40-45d9-a951-4fb02ecf361a_800w.jpg'
+      '/assets/balmer/balmer-4.jpg',
+      '/assets/balmer/balmer-detail.jpg',
+      '/assets/balmer/balmer-3.png'
     ],
     description: "Baignée de lumière naturelle, la Chambre Balmer offre un refuge apaisant avec ses tons clairs et ses matériaux nobles. Idéale pour un séjour d'affaires ou une escapade en couple, elle dispose d'un espace de travail ergonomique et d'une salle de bain moderne avec douche à l'italienne. La décoration minimaliste met en valeur l'artisanat local avec subtilité.",
     amenities: [
@@ -63,7 +64,10 @@ export const rooms: Room[] = [
     capacity: '2 Personnes',
     image: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/fca79aba-8e11-42bb-a18d-abe0260c7c92_1600w.jpg',
     gallery: [
-      'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/fca79aba-8e11-42bb-a18d-abe0260c7c92_1600w.jpg'
+      'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/fca79aba-8e11-42bb-a18d-abe0260c7c92_1600w.jpg',
+      '/assets/mangrove/mangrove-2.png',
+      '/assets/mangrove/mangrove-3.png',
+      '/assets/mangrove/mangrove-4.jpg'
     ],
     description: "Inspirée par la végétation luxuriante de San Pedro, la Chambre Mangrove s'ouvre sur une vue imprenable du jardin tropical. Les teintes vertes et boisées créent une atmosphère de sérénité absolue. Profitez d'un confort supérieur avec une literie King Size et un coin lecture cosy pour vos moments de détente après une journée à la plage.",
     amenities: [
@@ -113,9 +117,10 @@ export const rooms: Room[] = [
     capacity: '2 Personnes',
     image: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/951efe50-9424-4c9d-bb26-8f9c71f7af77_1600w.jpg',
     gallery: [
-      'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/951efe50-9424-4c9d-bb26-8f9c71f7af77_1600w.jpg',
-      'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/53a55ec7-2852-4749-8083-f36894c264cc.png',
-      'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/404d5573-0495-46f3-a75d-6c17f7d1fdf8.png'
+      '/assets/kroumen/kroumen-4.png',
+      '/assets/kroumen/kroumen-5.png',
+      '/assets/kroumen/kroumen-6.png',
+      '/assets/kroumen/kroumen-7.png'
     ],
     description: "Hommage à la culture locale, la Chambre Kroumen se distingue par sa décoration authentique intégrant des motifs traditionnels et des bois précieux. Chaleureuse et accueillante, elle offre tout le confort moderne tout en vous plongeant dans l'âme de la région. Un choix parfait pour les voyageurs en quête d'authenticité.",
     amenities: [
@@ -165,7 +170,10 @@ export const rooms: Room[] = [
     capacity: '2 Personnes',
     image: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/89d51d40-a72d-438c-a5a1-24a776b16f61_800w.jpg',
     gallery: [
-      'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/89d51d40-a72d-438c-a5a1-24a776b16f61_800w.jpg'
+      'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/89d51d40-a72d-438c-a5a1-24a776b16f61_800w.jpg',
+      '/assets/ebene/ebene-2.png',
+      '/assets/ebene/ebene-3.png',
+      '/assets/ebene/ebene-4.png'
     ],
     description: "L'élégance à l'état pur. La Chambre Ébène joue sur les contrastes with un mobilier en bois sombre et des textiles clairs de haute qualité. Plus spacieuse, elle offre une ambiance feutrée et sophistiquée, idéale pour se ressourcer. La salle de bain spacieuse est équipée de produits d'accueil premium.",
     amenities: [
@@ -215,7 +223,14 @@ export const rooms: Room[] = [
     capacity: '2-3 Personnes',
     image: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f844aa6f-6087-4155-b5be-7a1ca79c0c56_1600w.jpg',
     gallery: [
-      'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f844aa6f-6087-4155-b5be-7a1ca79c0c56_1600w.jpg'
+      'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f844aa6f-6087-4155-b5be-7a1ca79c0c56_1600w.jpg',
+      '/assets/suite/suite-2.png',
+      '/assets/suite/suite-3.jpg',
+      '/assets/suite/suite-4.png',
+      '/assets/suite/suite-5.jpg',
+      '/assets/suite/suite-6.png',
+      '/assets/suite/suite-7.png',
+      '/assets/suite/suite-8.png'
     ],
     description: "Cette suite offre tout le confort et l’équipement des chambres doubles, avec en plus un espace salon et une cuisine américaine, ce qui la rend adaptée à un séjour autonome et plus confortable.",
     amenities: [

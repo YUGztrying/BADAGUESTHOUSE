@@ -53,9 +53,9 @@ const RoomDetailPage: React.FC = () => {
 
         <Reveal className="absolute bottom-0 left-0 w-full p-6 md:p-12 max-w-7xl mx-auto">
           <div className="reveal-item">
-            <Link to="/" className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors backdrop-blur-md bg-white/10 px-6 py-2.5 rounded-full border border-white/20 text-sm group">
+            <Link to="/rooms" className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors backdrop-blur-md bg-white/10 px-6 py-2.5 rounded-full border border-white/20 text-sm group">
               <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-              Retour à l'accueil
+              Retour
             </Link>
           </div>
           <div className="reveal-item animation-delay-200 space-y-4 mb-8">

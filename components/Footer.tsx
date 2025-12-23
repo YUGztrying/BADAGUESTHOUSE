@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Facebook } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -37,18 +37,29 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-medium mb-6">Social</h4>
             <div className="flex space-x-4">
-              <a href="#" className="p-3 bg-white/5 rounded-full hover:bg-emerald-800 hover:text-white transition-all">
+              <a href="https://www.instagram.com/bada.guesthouse/" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-emerald-800 hover:text-white transition-all">
                 <Instagram size={20} />
-              </a>
-              <a href="#" className="p-3 bg-white/5 rounded-full hover:bg-emerald-800 hover:text-white transition-all">
-                <Facebook size={20} />
               </a>
             </div>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-light text-stone-500">
-          <p>© 2024 BADA Guesthouse — Tous droits réservés.</p>
+          <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-center">
+            <p>© 2024 BADA Guesthouse — Tous droits réservés.</p>
+            <span className="hidden md:block">•</span>
+            <p>
+              Designed and developed by{' '}
+              <a
+                href="https://www.instagram.com/guy_ismael_mbengue/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-emerald-400 transition-colors"
+              >
+                Guy-Ismael M'Bengue
+              </a>
+            </p>
+          </div>
           <div className="flex space-x-6">
             <a href="#" className="hover:text-white transition-colors">Mentions Légales</a>
             <a href="#" className="hover:text-white transition-colors">Confidentialité</a>
